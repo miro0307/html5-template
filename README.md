@@ -30,16 +30,16 @@
 
 #### 编译后的项目结构
 
-build/
-├── css/
-│   ├── index.css
-│   └── index.css.map
-├── js/
-│   ├── lib/
-│   │   ├── common.js
-│   │   └── common.js.map
-│   ├── index.js
-│   └── index.js.map
-├── images/
-├── manifest.json
-└── index.html
+build/  
+├── css/   
+│   ├── index.css   
+│   └── index.css.map   
+├── js/   
+│   ├── lib/   
+│   │   ├── common.js   
+│   │   └── common.js.map   
+│   ├── index.js   
+│   └── index.js.map   
+├── images/   
+├── manifest.json   
+└── index.html   
