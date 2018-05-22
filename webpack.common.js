@@ -14,7 +14,6 @@ const extractSass = new ExtractTextPlugin({
 const config = {
   entry: {
     index: './src/scripts/index.js',
-    home: './src/scripts/home.js'
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -36,7 +35,12 @@ const config = {
           publicPath: "../",
           filename: "css/[name].[hash:6].css",
           fallback: "style-loader",
-          use: "css-loader"
+          use: {
+            loader: "css-loader",
+            options: {
+              minimize: true
+            }
+          }
         })
       },
       {
@@ -68,11 +72,26 @@ const config = {
           publicPath: "../",
           filename: "css/[name].[hash:6].css",
           fallback: "style-loader",
-          use: [{
-            loader: "css-loader"
-          }, {
-            loader: "sass-loader"
-          }]
+          use: [
+            {
+              loader: "css-loader",
+              options: {
+                minimize: true
+              }
+            }, {
+              loader: "sass-loader",
+              options: {
+                minimize: true
+              }
+            }, {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                config: {
+                  path: 'postcss.config.js'
+                }
+              }
+            }]
         })
       }
     ]
