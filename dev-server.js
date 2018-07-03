@@ -40,11 +40,11 @@ app.get('/:viewname?', function(req, res, next) {
   });
 });
 
-module.exports = app.listen(8080, function(err) {
+module.exports = app.listen(8081, function(err) {
   if (err) {
     // do something
     return;
   }
 
-  console.log('Listening at http://localhost:' + 8080 + '\n')
+  console.log('Listening at http://localhost:' + 8081 + '\n')
 })

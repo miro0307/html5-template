@@ -11,9 +11,10 @@
   },
 ```
 
+- `npm install` 安装项目的所有依赖
 - `npm run start` 命令用于开启热加载服务器
 - `npm run build` 命令用于编译项目
-- `npm run dev` 命令用于开启一个express服务, 可以使用`http://localhost:8080/index`这样的路由访问项目
+- `npm run dev` 命令用于开启一个express服务, 可以使用`http://localhost:8081/index`这样的路由访问项目
 
 #### 主要实现的功能
 
@@ -27,19 +28,3 @@
 - 公共库代码分割管理
 - 开启source map方便调试
 - css打包隔离, 使用link引入
-
-#### 编译后的项目结构
-
-build/  
-├── css/   
-│   ├── index.css   
-│   └── index.css.map   
-├── js/   
-│   ├── lib/   
-│   │   ├── common.js   
-│   │   └── common.js.map   
-│   ├── index.js   
-│   └── index.js.map   
-├── images/   
-├── manifest.json   
-└── index.html   
